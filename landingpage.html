@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src = "landingpage.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        name{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        dropdown-container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .button-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .test-skills-btn {
+            padding: 2rem 4rem;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .test-skills-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+        }
+
+        .test-skills-btn:active {
+            transform: translateY(-2px);
+        }
+
+        .content-area {
+            min-height: 500px;
+        }
+
+        @media (max-width: 768px) {
+            .test-skills-btn {
+                padding: 1.5rem 3rem;
+                font-size: 1.2rem;
+            }
+        }
+         .dashboard {
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 600px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #e3f2fd;
+            font-size: 32px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            color: #b3e5fc;
+            font-size: 14px;
+
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #0288d1, #01579b);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #0277bd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(2, 136, 209, 0.4);
+        }
+
+        .stat-label {
+            color: #b3e5fc;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: #fff;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-unit {
+            color: #81d4fa;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #81d4fa;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .stat-value {
+                font-size: 36px;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <br>
+        <br>
+        <br>
+    </header>
+    <button class="test-skills-btn" href="login.html" onclick="LogOut()">
+            Logout
+    </button>
+    
+    <br>
+    <br>
+    <br>
+
+    </div>
+
+    <div class="container">
+        <div class="button-section">
+            <button class="test-skills-btn" onclick="testSkills()" href="index.html"> Test Your Fact Checking Skills</button>
+    </div>
+
+    <div class="dashboard" style="align-items:ceter;">
+        <div class="header">
+            <h1>📊 Dashboard</h1>
+            <p>Your Performance Metrics</p>
+        </div>
+    </div>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">High Score</div>
+                <div class="stat-value">80</div>
+                <div class="stat-unit">points</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Average Time</div>
+                <div class="stat-value">3.2</div>
+                <div class="stat-unit">seconds</div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        function testSkills() {
+            window.location.replace("index.html");
+            // You can hook this up to navigate to a quiz or game page
+        }
+        function LogOut() {
+            window.location.replace("login.html");
+        }
+    </script>
+</body>
+</html>

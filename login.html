@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src = "auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- LOGIN FORM -->
+        <div id="loginForm">
+            <h1>Login</h1>
+            <div class="error" id="loginError"></div>
+            <div class="success" id="loginSuccess"></div>
+            
+            <form onsubmit="login(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            
+            <div class="toggle-link">
+                Don't have an account? <a onclick="toggleForms()">Sign up</a>
+            </div>
+        </div>
+    <script src="auth.js"></script>
+</body>
+</html>
